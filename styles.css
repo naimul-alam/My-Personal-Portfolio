@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: teal;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+/*Header Section*/
+
+header{
+    background-color: aquamarine;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: larger;
+}
+
+/*Nav Section*/
+
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 10PX;
+    transition: background-color 0.5s ease;
+}
+
+nav a:hover{
+    background-color:green ;
+    border-radius: 5px;
+}
+
+/*Hero Section */
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: linear-gradient(to left,teal,green);
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.hero h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+    animation-name: one;
+    animation-iteration-count: 3s;
+    animation: ease-in-out;
+
+}
+
+.hero p{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+ .hero button{
+    padding: 10px;
+    background-color: azure;
+    color: grey;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+ }
+ .hero button:hover{
+    background-color: green;
+    color: white;
+    transform: scale(1.2);
+ }
