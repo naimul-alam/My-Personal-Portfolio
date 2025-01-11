@@ -8,46 +8,55 @@
     <title>My Portfolio</title>
 </head>
 <body>
+    <!-- Header Section -->
    <header>
     <h1>My Perosnal Portfolio</h1>
     <nav>
-        <a href="#">About Me</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact Me</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact Me</a>
     </nav>
    </header>
-
+<!-- Hero Section -->
    <section class="hero">
     <h1>Welcome to My Portfolio</h1>
     <p>Explore my projects and contact me</p>
     <button>Learn More</button>
      </section>
-
-     <section class="about">
-        <h2>About Me</h2>
-        <img src="https://naimul-alam.github.io/assets/images/m.jpg" alt="">
+     <!-- About Section -->
+     <section id="about" class="about">
+        <div class="about-img">
+        <img src="https://naimul-alam.github.io/assets/images/m.jpg">
+    </div>
+    <div class="about-text">
+        <h2>About <span>Me</span></h2>
+        <h4>Web Designer</h4>
         <p>I'm Web Developer from Bangladesh, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.
 
          My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way.</p>
+        </div>
      </section>
-
-     <section class="projects">
+     <!-- Project Section -->
+     <section id="projects" class="projects">
+        <div>
         <h2>Projects</h2>
-        <div class="projects">Project 1</div>
-        <div class="projects">Project 2</div>
-        <div class="projects">Project 3</div>
+        <div class="project"><img src="./src/Screenshot (50).png" width="300px" alt=""></div>
+        <div class="project"><img src="./src/Screenshot (49).png"  width="300px"></div>
+        <div class="project"><img src="./src/Screenshot (48).png" width="300px" alt=""></div>
+    </div>
      </section>
-
-     <section class="contact">
+     <!-- Contact Section -->
+     <section id="contact" class="contact">
         <h2>Contact Me</h2>
         <form>
             <input type="text" placeholder="Your Name">
+            <input type="number" placeholder="Your Phone Number">
             <input type="email" placeholder="Your Email">
             <textarea placeholder="Your Massage"></textarea>
-            <button>Submit</button>
+            <button>Send Message</button>
         </form>
      </section>
-
+     <!-- Footer -->
      <footer>
         <p>&copy; 2025 My Portfolio. All rights reserved.</p>
      </footer>

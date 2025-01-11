@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: teal;
+    background-color:rgb(35, 35, 111);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
@@ -13,7 +13,7 @@ body{
 /*Header Section*/
 
 header{
-    background-color: aquamarine;
+    background-color:rgb(35, 35, 111);
     color: white;
     padding: 10px;
     text-align: center;
@@ -40,23 +40,29 @@ nav a:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: linear-gradient(to left,teal,green);
+    height: 100vh;
     color: white;
     text-align: center;
     position: relative;
+    overflow: hidden;
+    background-color: linear-gradient(to left, green,skyblue);
 }
 .hero h1{
     font-size: 50px;
     margin-bottom: 10px;
-    animation-name: one;
-    animation-iteration-count: 3s;
-    animation: ease-in-out;
-
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    background-color: linear-gradient(to left, green,skyblue);
 }
+     
+
+
+
 
 .hero p{
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
  .hero button{
     padding: 10px;
@@ -64,6 +70,7 @@ nav a:hover{
     color: grey;
     font-size: 20px;
     border-radius: 5px;
+    border: none;
     transition: transform 0.2s ease;
  }
  .hero button:hover{
@@ -71,3 +78,159 @@ nav a:hover{
     color: white;
     transform: scale(1.2);
  }
+ .hero::before{
+    height: 200%;
+    width: 200%;
+    background-color: radrial-gradient(circle, green, transparent);
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    animation-name: spin;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+ }
+ @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+ 
+ /*About section*/
+ .about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 24px;
+ }
+ .about-img img{
+    height: auto;
+    width: 100%;
+    max-width: 530px;
+    border-radius: 5px;
+ }
+.about text h2{
+    font-size: 48px;
+    line-height: 1;
+}
+.about-text h4{
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    margin-bottom: 64px;
+    line-height: 1.8;
+    font-size:20px ;
+    color:#ccc;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+ /*Projects Section*/
+
+ .projects{
+   
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color:rgb(35, 35, 111);
+ }
+
+ .project{
+   /* border-radius: 20%; */
+   display: flex; 
+    justify-content: center; 
+     align-items: center; 
+     padding: 16px;
+     cursor: pointer; 
+    transition: transform; 
+    transition-duration: 0.3s;
+ }
+ img{
+    /* border-radius: 10%; */
+ }
+ .project:hover{
+    transform: scale(1.2);
+    /* box-shadow: 0 5px 10px; */
+ }
+
+ /*Contact Section*/
+
+ .contact{
+    padding: 40px;
+    background-image: url(./src/backround\ pic.jpg!bw700);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+input{
+     width: 30%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+textarea{
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button{
+    padding: 8px;
+    background-color: rgb(191, 228, 228);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: ease;
+    transition-duration: 0.3s;
+}
+
+button:hover{
+    background-color: green;
+    transform: scale(1.2);
+}
+
+/*Footer Section*/
+
+footer{
+    text-align: center;
+    padding: 20px;
+  
+    color: white;
+}
